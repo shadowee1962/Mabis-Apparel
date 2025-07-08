@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>mabis_ventures</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="assets/Mabis Apparel Logo Design.png" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+  
+    .navbar {
+  background-color: #5e042f;
+  padding: 10px 20px;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: #fff;
+  color: #c12270;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li a {
+    color: #c12270;
+    font-weight: bold;
+  }
+}
+  </style>
+  
+</head>
+<body>
+
+ <!-- Navigation -->
+ <nav class="navbar">
+  <div class="container">
+    <div class="logo" style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <img src="assets/Mabis Apparel Logo Design.png" alt="Mabis Ventures Logo" style="height: 60px;" />
+      <h1 style="margin: 0;">Mabis Apparel</h1>
+  </div>
+    <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Unleash Your Style</h2>
+    <p>Discover outfits handpicked for you. Chic. Feminine. Fresh.</p>
+    <a href="#new" class="btn">Shop the Look</a>
+  </section>
+
+<section class="categories">
+  <h3>Shop by Categories</h3>
+  <div class="category-grid">
+    <button class="category-btn active" data-category="all">All <span class="count"></span></button>
+    <button class="category-btn" data-category="native-set">Native Set <span class="count"></span></button>
+    <button class="category-btn" data-category="ankara">Ankara <span class="count"></span></button>
+    <button class="category-btn" data-category="lace">Lace <span class="count"></span></button>
+    <button class="category-btn" data-category="boubou">Boubou <span class="count"></span></button>
+  </div>
+</section>
+
+
+  <!-- New Arrivals -->
+  <section id="new" class="new-arrivals">
+    <h3>New Arrivals</h3>
+    <div class="search-bar-container">
+        <input type="text" id="productSearch" placeholder="Search for an item..." />
+      </div>
+      
+    <div class="product-grid">
+
+        <div class="product-card" data-id="001" data-name="Bold Native Set" data-category="native-set">
+            <img src="ns/ns0.jpg" alt="Bold Native Set" height="400px" width="250px" />
+            <h4>Bold Native Set</h4>
+            <p>#14,000</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="002" data-name="Embroidered Native Style" data-category="native-set">
+            <img src="ns/ns1.jpg" alt="Embroidered Native Style" height="400px" width="250px" />
+            <h4>Embroidered Native Style</h4>
+            <p>#16,000</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="003" data-name="Navy Blue Native" data-category="native-set">
+            <img src="ns/ns2.jpg" alt="Navy Blue Native" height="400px" width="250px" />
+            <h4>Navy Blue Native</h4>
+            <p>#13,500</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="004" data-name="Traditional White Set" data-category="native-set">
+            <img src="ns/ns3.jpg" alt="Traditional White Set" height="400px" width="250px" />
+            <h4>Traditional White Set</h4>
+            <p>#12,000</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="005" data-name="Native Set with Cap" data-category="native-set">
+            <img src="ns/ns4.jpg" alt="Native Set with Cap" height="400px" width="250px" />
+            <h4>Native Set with Cap</h4>
+            <p>#17,000</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="006" data-name="Green Embroidery Native" data-category="native-set">
+            <img src="ns/ns5.jpg" alt="Green Embroidery Native" height="400px" width="250px" />
+            <h4>Green Embroidery Native</h4>
+            <p>#14,500</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="007" data-name="Royal Blue Native" data-category="native-set">
+            <img src="ns/ns6.jpg" alt="Royal Blue Native" height="400px" width="250px" />
+            <h4>Royal Blue Native</h4>
+            <p>#15,000</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="008" data-name="Ash Grey Native Set" data-category="native-set">
+            <img src="ns/ns7.jpg" alt="Ash Grey Native Set" height="400px" width="250px" />
+            <h4>Ash Grey Native Set</h4>
+            <p>#13,000</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="009" data-name="Deluxe Native with Embroidery" data-category="native-set">
+            <img src="ns/ns8.jpg" alt="Deluxe Native" height="400px" width="250px" />
+            <h4>Deluxe Native Set</h4>
+            <p>#18,500</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="010" data-name="Casual Native Design" data-category="native-set">
+            <img src="ns/ns9.jpg" alt="Casual Native Design" height="400px" width="250px" />
+            <h4>Casual Native Design</h4>
+            <p>#11,500</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          <div class="product-card" data-id="011" data-name="Floral Gown" data-category="native-set">
+            <img src="ns/ns10.jpg" alt="Floral Gown" height="400px" width="250px" />
+            <h4>Floral Gown</h4>
+            <p>#12,000</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="012" data-name="Vibrant Skirt" data-category="native-set">
+            <img src="ns/ns11.jpg" alt="Vibrant Skirt" height="400px" width="250px" />
+            <h4>Vibrant Skirt</h4>
+            <p>#6,000</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="013" data-name="Jumpsuit" data-category="native-set">
+            <img src="ns/ns12.jpg" alt="Jumpsuit" height="400px" width="250px" />
+            <h4>Jumpsuit</h4>
+            <p>#14,500</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="014" data-name="Ankara Short Dress" data-category="ankara">
+            <img src="https://source.unsplash.com/300x400/?ankara,short" alt="Ankara Short Dress" height="400px" width="250px" />
+            <h4>Ankara Short Dress</h4>
+            <p>#9,000</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="015" data-name="Fitted Ankara Blouse" data-category="ankara">
+            <img src="https://source.unsplash.com/300x400/?ankara,blouse" alt="Fitted Ankara Blouse" height="400px" width="250px" />
+            <h4>Fitted Ankara Blouse</h4>
+            <p>#5,500</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="016" data-name="Modern Ankara Set" data-category="ankara">
+            <img src="https://source.unsplash.com/300x400/?ankara,set" alt="Modern Ankara Set" height="400px" width="250px" />
+            <h4>Modern Ankara Set</h4>
+            <p>#11,000</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="017" data-name="Pink Ankara Wrapper" data-category="ankara">
+            <img src="https://source.unsplash.com/300x400/?ankara,wrapper" alt="Pink Ankara Wrapper" height="400px" width="250px" />
+            <h4>Pink Ankara Wrapper</h4>
+            <p>#7,500</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="018" data-name="Mixed Ankara Two-Piece" data-category="ankara">
+            <img src="https://source.unsplash.com/300x400/?ankara,twopiece" alt="Mixed Ankara Two-Piece" height="400px" width="250px" />
+            <h4>Mixed Ankara Two-Piece</h4>
+            <p>#10,000</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="019" data-name="Casual Ankara Gown" data-category="ankara">
+            <img src="https://source.unsplash.com/300x400/?ankara,dress" alt="Casual Ankara Gown" height="400px" width="250px" />
+            <h4>Casual Ankara Gown</h4>
+            <p>#9,800</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="020" data-name="Classic Peplum" data-category="lace">
+            <img src="lace/lace16.jpg" alt="Classic Peplum" height="400px" width="250px" />
+            <h4>Classic Peplum</h4>
+            <p>#8,200</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          <div class="product-card" data-id="021" data-name="White Lace Boubou" data-category="lace">
+            <img src="lace/lace0.jpg" alt="White Lace Boubou" height="400px" width="250px" />
+            <h4>White Lace Boubou</h4>
+            <p>#15,000</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="022" data-name="Embroidered Lace Dress" data-category="lace">
+            <img src="lace/lace1.jpg" alt="Embroidered Lace Dress" height="400px" width="250px" />
+            <h4>Embroidered Lace Dress</h4>
+            <p>#14,500</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="023" data-name="Lace Skirt & Blouse" data-category="lace">
+            <img src="lace/lace2.jpg" alt="Lace Skirt & Blouse" height="400px" width="250px" />
+            <h4>Lace Skirt & Blouse</h4>
+            <p>#13,200</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="024" data-name="Luxury Lace Gown" data-category="lace">
+            <img src="lace/lace3.jpg" alt="Luxury Lace Gown" height="400px" width="250px" />
+            <h4>Luxury Lace Gown</h4>
+            <p>#18,000</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="025" data-name="Net Lace Boubou" data-category="lace">
+            <img src="lace/lace4.jpg" alt="Net Lace Boubou" height="400px" width="250px" />
+            <h4>Net Lace Boubou</h4>
+            <p>#16,000</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="026" data-name="Soft Lace Wrapper Set" data-category="lace">
+            <img src="lace/lace5.jpg" alt="Soft Lace Wrapper Set" height="400px" width="250px" />
+            <h4>Soft Lace Wrapper Set</h4>
+            <p>#11,500</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="027" data-name="Pink Floral Lace Gown" data-category="lace">
+            <img src="lace/lace6.jpg" alt="Pink Floral Lace Gown" height="400px" width="250px" />
+            <h4>Pink Floral Lace Gown</h4>
+            <p>#13,800</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="028" data-name="Lace Kaftan with Stones" data-category="lace">
+            <img src="lace/lace7.jpg" alt="Lace Kaftan" height="400px" width="250px" />
+            <h4>Lace Kaftan with Stones</h4>
+            <p>#17,000</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="029" data-name="Elegant Wine Lace Dress" data-category="lace">
+            <img src="lace/lace8.jpg" alt="Wine Lace Dress" height="400px" width="250px" />
+            <h4>Elegant Wine Lace Dress</h4>
+            <p>#12,800</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="030" data-name="Royal Blue Lace Wrapper" data-category="lace">
+            <img src="lace/lace9.jpg" alt="Royal Blue Lace" height="400px" width="250px" />
+            <h4>Royal Blue Lace Wrapper</h4>
+            <p>#14,000</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          <div class="product-card" data-id="031" data-name="Silk lace Gown" data-category="lace">
+            <img src="lace/lace10.jpg" alt="Silk lace Gown" height="400px" width="250px" />
+            <h4>Silk lace Gown</h4>
+            <p>#12,000</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="032" data-name="Royal Purple lace" data-category="lace">
+            <img src="lace/lace11.jpg" alt="Royal Purple lace" height="400px" width="250px" />
+            <h4>Royal Purple lace</h4>
+            <p>#13,500</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="033" data-name="Embroidered lace" data-category="lace">
+            <img src="lace/lace12.jpg" alt="Embroidered lace" height="400px" width="250px" />
+            <h4>Embroidered lace</h4>
+            <p>#15,000</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="034" data-name="Peach Flowy lace" data-category="lace">
+            <img src="lace/lace13.jpg" alt="Peach Flowy lace" height="400px" width="250px" />
+            <h4>Peach Flowy lace</h4>
+            <p>#11,800</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="035" data-name="Lace lace Maxi" data-category="lace">
+            <img src="lace/lace14.jpg" alt="lace Maxi" height="400px" width="250px" />
+            <h4>Lace Maxi</h4>
+            <p>#13,000</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="036" data-name="Luxury Chiffon lace" data-category="lace">
+            <img src="lace/lace15.jpg" alt="Luxury Chiffon lace" height="400px" width="250px" />
+            <h4>Luxury Chiffon lace</h4>
+            <p>#14,000</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="037" data-name="Emerald Green Boubou" data-category="boubou">
+            <img src="bo/bo0.jpg" alt="Emerald Green Boubou" />
+            <h4>Emerald Green Boubou</h4>
+            <p>#13,800</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="038" data-name="Boubou with Scarf" data-category="boubou">
+            <img src="bo/bo1.jpg" alt="Boubou with Scarf" />
+            <h4>Boubou with Scarf</h4>
+            <p>#12,500</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="039" data-name="Sleeveless Ankara Boubou" data-category="boubou">
+            <img src="bo/bo2.jpg" alt="Sleeveless Ankara Boubou" />
+            <h4>Sleeveless Ankara Boubou</h4>
+            <p>#10,800</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+          <div class="product-card" data-id="040" data-name="Black and Gold Boubou" data-category="boubou">
+            <img src="bo/bo3.jpg" alt="Black and Gold Boubou" />
+            <h4>Black and Gold Boubou</h4>
+            <p>#16,000</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+
+          <div class="product-card" data-id="040" data-name="Black and Gold Boubou" data-category="boubou">
+            <img src="bo/bo4.jpg" alt="Black and Gold Boubou" />
+            <h4>Black and Gold Boubou</h4>
+            <p>#16,000</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+
+          <div class="product-card" data-id="040" data-name="Black and Gold Boubou" data-category="boubou">
+            <img src="bo/bo5.jpg" alt="Black and Gold Boubou" />
+            <h4>Black and Gold Boubou</h4>
+            <p>#16,000</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+
+          <div class="product-card" data-id="040" data-name="Black and Gold Boubou" data-category="boubou">
+            <img src="bo/bo6.jpg" alt="Black and Gold Boubou" />
+            <h4>Black and Gold Boubou</h4>
+            <p>#16,000</p>
+            <button class="contact-btn">Order on WhatsApp</button>
+          </div>
+          
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h2>Mabis</h2>
+        <p>Your trusted fashion destination for native wears, ankara, lace & boubou.</p>
+      </div>
+  
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><strong>Phone:</strong>+234 811 023 7267</p>
+        <p><strong>Email:</strong> info@mabisfashion.com</p>
+        <p><strong>Instagram:</strong> @mabiswears</p>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2025 Mabis. All rights reserved.</p>
+    </div>
+  </footer>
+  <a href="https://wa.me/+2348110237267?text=Hi, I’d like to order from Mabis Fashion" 
+   class="whatsapp-float" 
+   target="_blank" 
+   title="Chat with us on WhatsApp">
+  💬 Chat
+</a>
+
+<script>
+  const toggle = document.getElementById('mobile-menu');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>

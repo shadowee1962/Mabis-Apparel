@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Mabis Ventures</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="assets/Mabis Apparel Logo Design.png" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+  
+    .navbar {
+  background-color: #5e042f;
+  padding: 10px 20px;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: #fff;
+  color: #c12270;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li a {
+    color: #c12270;
+    font-weight: bold;
+  }
+}
+
+    h2 {
+      text-align: center;
+      color: #d63384;
+      margin-bottom: 20px;
+    }
+    .contact-info, .contact-form {
+      margin-bottom: 40px;
+    }
+    .contact-info p {
+      font-size: 16px;
+      margin: 10px 0;
+      background: #f9f9f9;
+      padding: 10px 15px;
+      border-left: 4px solid #d63384;
+      border-radius: 4px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+#textarea {
+  min-height: 140px;
+  resize: vertical;
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  padding: 14px 16px;
+  border: 1.5px solid #d63384;
+  border-left: 5px solid #d63384;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(214, 51, 132, 0.1);
+  transition: 0.3s ease;
+}
+
+#textarea:focus {
+  border-color: #c12270;
+  box-shadow: 0 0 8px rgba(193, 34, 112, 0.25);
+}
+
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      background: #f9f9f9;
+    }
+    button {
+      padding: 12px;
+      background-color: #d63384;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #c12270;
+    }
+    .footer {
+    background-color: #111;
+    color: #fff;
+    padding: 40px 20px 10px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-brand {
+    flex: 1 1 300px;
+  }
+  
+  .footer-brand h2 {
+    font-size: 24px;
+    color: #d63384;
+    margin-bottom: 10px;
+  }
+  
+  .footer-brand p {
+    font-size: 15px;
+    color: #ccc;
+    line-height: 1.6;
+  }
+  
+  .footer-links, .footer-contact {
+    flex: 1 1 200px;
+  }
+  
+  .footer-links h4,
+  .footer-contact h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-links ul li a:hover {
+    color: #fff;
+  }
+  
+  .footer-contact p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #ccc;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 20px 0 10px;
+    font-size: 14px;
+    color: #888;
+    border-top: 1px solid #333;
+    margin-top: 30px;
+  }
+  
+  
+  </style>
+</head>
+<body>
+
+ <!-- Navigation -->
+<nav class="navbar">
+  <div class="container">
+    <div class="logo" style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <img src="assets/Mabis Apparel Logo Design.png" alt="Mabis Ventures Logo" style="height: 60px;" />
+      <h1 style="margin: 0;">Mabis Apparel</h1>
+  </div>
+    <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <main>
+    <section class="contact-info">
+      <h2>Reach Out to Us</h2>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/+2348110237267">+234 811 023 7267</a></p>
+      <p><strong>Email:</strong> contact@mabisventures.com</p>
+      <p><strong>Instagram:</strong> @mabis_ventures</p>
+      <p><strong>Facebook:</strong> facebook.com/mabisventures</p>
+    </section>
+
+    <section class="contact-form" id="textarea">
+      <h2>Send Us a Message</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h2>Mabis</h2>
+        <p>Your trusted fashion destination for native wears, ankara, lace & boubou.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact" id="contact">
+        <h4>Contact Us</h4>
+        <p><strong>Phone:</strong>+234 811 023 7267</p>
+        <p><strong>Email:</strong> info@mabisfashion.com</p>
+        <p><strong>Instagram:</strong> @mabiswears</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Mabis. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    const toggle = document.getElementById('mobile-menu');
+    const nav = document.getElementById('nav-links');
+  
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

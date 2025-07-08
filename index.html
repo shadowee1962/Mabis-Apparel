@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mabis Ventures - Fashion Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="assets/Mabis Apparel Logo Design.png" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+  
+    .navbar {
+  background-color: #5e042f;
+  padding: 10px 20px;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: #fff;
+  color: #c12270;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li a {
+    color: #c12270;
+    font-weight: bold;
+  }
+}
+    .hero {
+      position: relative;
+      height: 500px;
+      background-image: url('https://images.pexels.com/photos/13680054/pexels-photo-13680054.jpeg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    .hero-text h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    .hero-text p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .hero-text a {
+      background-color: #fff;
+      color: #d63384;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    h2 {
+      color: #d63384;
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .card {
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      width: 220px;
+      text-align: left;
+    }
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .card h4 {
+      margin: 10px;
+      font-size: 16px;
+    }
+    .about, .testimonial, .why, .contact {
+      max-width: 800px;
+      margin: auto;
+    }
+    .testimonial blockquote {
+      font-style: italic;
+      color: #555;
+    }
+    .why ul {
+      list-style: none;
+      padding: 0;
+    }
+    .why li {
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    footer {
+      background-color: #f2f2f2;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+ <!-- Navigation -->
+ <nav class="navbar">
+  <div class="container">
+    <div class="logo" style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <img src="assets/Mabis Apparel Logo Design.png" alt="Mabis Ventures Logo" style="height: 60px;" />
+      <h1 style="margin: 0;">Mabis Apparel</h1>
+  </div>
+    <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Unleash Your Style</h1>
+      <p>Elegant Ankara, Lace, Boubou, and Native Sets</p>
+      <a href="shop.html">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Categories Preview -->
+  <section class="category-preview">
+    <h3>Explore Our Collections</h3>
+    <div class="category-cards">
+      <div class="cat-card">
+        <img src="assets/cl1.jpg" alt="Native Set">
+        <h4>Native Set</h4>
+      </div>
+      <div class="cat-card">
+        <img src="assets/cl2.jpg" alt="Ankara">
+        <h4>Ankara</h4>
+      </div>
+      <div class="cat-card">
+        <img src="assets/cl4.jpg" alt="Lace">
+        <h4>Lace</h4>
+      </div>
+      <div class="cat-card">
+        <img src="assets/cl3.jpg" alt="Boubou">
+        <h4>Boubou</h4>
+      </div>
+    </div>
+    <a href="shop.html" class="explore-btn">View Full Shop</a>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="about-us">
+    <h3>About Mabis</h3>
+    <p>Mabis is your go-to destination for premium female native fashion. We focus on quality, elegance, and the richness of African culture — from Ankara to Boubou and beyond.</p>
+  </section>
+  <section id="bestsellers">
+    <h2>Best Sellers</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://source.unsplash.com/300x300/?fashion,ankara" alt="">
+        <h4>Modern Ankara Gown</h4>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/300x300/?fashion,lace" alt="">
+        <h4>Luxury Lace Dress</h4>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/300x300/?fashion,boubou" alt="">
+        <h4>Flowy Boubou Robe</h4>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Mabis Ventures</h2>
+    <div class="about">
+      <p>We are a proudly Nigerian fashion brand, blending tradition with modern elegance. Our collections are crafted for style-conscious women who love to stand out. From casual native sets to elegant lace outfits, we deliver quality and beauty in every stitch.</p>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial">
+      <blockquote>"Every dress from Mabis fits like a dream. Their service is amazing and the styles are unique!" – Ifeoma A.</blockquote>
+      <blockquote>"Best local fashion brand I’ve used in Nigeria! Highly recommended." – Aisha T.</blockquote>
+    </div>
+  </section>
+
+  <section id="why">
+    <h2>Why Shop With Us?</h2>
+    <div class="why">
+      <ul>
+        <li>🌟 Unique African Designs</li>
+        <li>🚚 Fast Nationwide Delivery</li>
+        <li>💳 Easy WhatsApp Ordering</li>
+        <li>🎁 Quality Materials Guaranteed</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact & Newsletter</h2>
+    <div class="contact">
+      <p>Follow us on Instagram, Facebook or WhatsApp us directly to place your order.</p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/+2348110237267">+234 811 023 7267</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h2>Mabis</h2>
+        <p>Your trusted fashion destination for native wears, ankara, lace & boubou.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact" id="contact">
+        <h4>Contact Us</h4>
+        <p><strong>Phone:</strong>+234 811 023 7267</p>
+        <p><strong>Email:</strong> info@mabisfashion.com</p>
+        <p><strong>Instagram:</strong> @mabiswears</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Mabis. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    const toggle = document.getElementById('mobile-menu');
+    const nav = document.getElementById('nav-links');
+  
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

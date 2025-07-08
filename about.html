@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Mabis Ventures</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="assets/Mabis Apparel Logo Design.png" />
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .navbar {
+background-color: #5e042f;
+padding: 10px 20px;
+}
+
+.navbar .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+max-width: 1100px;
+margin: 0 auto;
+}
+
+.logo a {
+font-size: 22px;
+font-weight: bold;
+color: white;
+text-decoration: none;
+}
+
+.nav-links {
+list-style: none;
+display: flex;
+gap: 20px;
+}
+
+.nav-links li a {
+color: white;
+text-decoration: none;
+font-weight: 500;
+padding: 8px 12px;
+border-radius: 5px;
+transition: background 0.3s ease;
+}
+
+.nav-links li a:hover {
+background-color: #fff;
+color: #c12270;
+}
+
+.menu-toggle {
+display: none;
+font-size: 26px;
+color: white;
+cursor: pointer;
+}
+
+@media (max-width: 768px) {
+.menu-toggle {
+  display: block;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background: white;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.nav-links.show {
+  display: flex;
+}
+
+.nav-links li a {
+  color: #c12270;
+  font-weight: bold;
+}
+}
+</style>
+</head>
+<body>
+
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar">
+         <div class="container">
+           <div class="logo" style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+             <img src="assets/Mabis Apparel Logo Design.png" alt="Mabis Ventures Logo" style="height: 60px;" />
+             <h1 style="margin: 0;">Mabis Apparel</h1>
+         </div>
+           <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+           <ul class="nav-links" id="nav-links">
+             <li><a href="index.html">Home</a></li>
+             <li><a href="shop.html">Shop</a></li>
+             <li><a href="contact.html">Contact</a></li>
+           </ul>
+         </div>
+       </nav>
+
+  <main style="max-width: 900px; margin: 60px auto; padding: 0 20px;">
+    <h1 style="color: #d63384; text-align: center;">About Mabis Apparel Ventures</h1>
+    <p style="margin-top: 30px; font-size: 16px; line-height: 1.7;">
+      Mabis Ventures is a proudly Nigerian fashion brand, dedicated to celebrating African heritage through timeless styles and elegant tailoring. We specialize in creating vibrant and sophisticated native wear, ankara, lace, and boubou outfits that empower women to express their culture with confidence and grace.
+    </p>
+
+    <h2 style="color: #c12270; margin-top: 40px;">Our Mission</h2>
+    <p>
+      To become a leading provider of elegant and culturally inspired fashion, while maintaining the highest standards in craftsmanship and customer satisfaction.
+    </p>
+
+    <h2 style="color: #c12270; margin-top: 40px;">What We Stand For</h2>
+    <ul style="line-height: 1.8; padding-left: 20px;">
+      <li>Authenticity and cultural pride</li>
+      <li>Affordable luxury</li>
+      <li>Quality materials and craftsmanship</li>
+      <li>Empowering women through fashion</li>
+    </ul>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h2>Mabis</h2>
+        <p>Your trusted fashion destination for native wears, ankara, lace & boubou.</p>
+      </div>
+  
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><strong>Phone:</strong>+234 811 023 7267</p>
+        <p><strong>Email:</strong> info@mabisfashion.com</p>
+        <p><strong>Instagram:</strong> @mabiswears</p>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2025 Mabis. All rights reserved.</p>
+    </div>
+  <script>
+    const toggle = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>
